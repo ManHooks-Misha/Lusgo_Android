@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.app.SyrianskaTaekwondo.hejtelge" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"/>
+
+    <application
+        android:name="com.app.SyrianskaTaekwondo.hejtelge.utils.AppApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_taelogo_round"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_taelogo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:name"
+        tools:targetApi="q" >
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.TeamInviteUser"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.AcceptInvite"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.LoginwithOTP"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.GroupChatDetailsUser"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.GroupChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.GroupChatList"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.LiveCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.SeachUserForEvent"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Add_Contact"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Add_Document"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Add_newLink"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Update_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"/>
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.LinkOpen"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.SearchActivityforMessage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.MessageForProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ArkivActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Report_detailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"/>
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Report_ListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"/>
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.TermandCondition"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Remove_assign"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ZoominImage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Rolechange_assign"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.AddTeam_member"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Teamshow_array"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ImagePickerActivity"
+            android:label="abc" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Eventpublic"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Add_info_NEw"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.OtpVerify"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.CoachList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.MessagePriviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Eventshow"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.WizardScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_No" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ReadUser_Message"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.CommentActivity"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.TeamUser"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"/>
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.utils.ActivityImagePick"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_No_" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ShowDocumentActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"/>
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ImageShowDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_No_" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.EditTeam"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Team_ListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.AddTeam"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.GroupUser"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ChooseSponser"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"/>
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ContactListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.DataPolicy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ResetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.InvitationList_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.uploadimage.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.uploadimage.SampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.InviteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.EditCampaign"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.EditSponser"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.EditUser"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" /> <!-- <activity android:name="com.soundcloud.android.crop.CropImageActivity" /> -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_No"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ViewGroupInfo"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.EditGroup"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.NewsViewList"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.AddCampaign"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.CreateSponsers"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.AddInformation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.CampaignListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.SponserListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.UserListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.GroupListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.EditProfile"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme_No" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.InboxActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.CreateEvent"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.CreateMessage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.CreateNews"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.CreateGroup"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"/>
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Page_withOut_Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.GroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.HomePage"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.SignupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.RegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.Information"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.SplashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="vk.help.imagepicker.features.ImagePickerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ef_AppTheme" />
+
+        <service
+            android:name="com.app.SyrianskaTaekwondo.hejtelge.customClass.MyFirebaseMessagingService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo_app" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+    </application>
+
+</manifest>

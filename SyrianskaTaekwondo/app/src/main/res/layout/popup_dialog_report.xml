@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start"
+            android:layout_marginBottom="5dp"
+            android:text="Anmärkningar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_16dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/comment_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start"
+            android:layout_marginBottom="5dp"
+
+            android:text="Anmärkningar"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_16dp"
+            android:textStyle="normal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start"
+            android:text="Anmärkningar"
+            android:layout_marginBottom="5dp"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_16dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:gravity="start"
+            android:text="Anmärkningar"
+            android:layout_marginBottom="5dp"
+
+            android:textColor="@color/material_red"
+            android:textSize="@dimen/dimen_16dp"
+            android:textStyle="normal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonOk"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/outline_button"
+            android:gravity="center"
+            android:text="OK"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">Syrianska Taekwondo</string>
+    <string name="info1">Lusgo är en mobilapplikation för skolor, förskolor, föreningar och företag. Lusgo är en effektiv kommunikationsportal för att nå ut till sina användare.</string>
+    <string name="info2">En administratör kan skicka ett meddelande till en eller samtliga medlemmar samtidigt. Det går även bifoga dokument och externa länkar.</string>
+    <string name="info3">Varje användare har en egen unik kalender.</string>
+    <string name="info4">Alla dokument finns sparade i mobilapplikationen. Användarna behöver inte leta efter dokument bland e-post och anslagstavlor. Alla dokument finns sparade i mobilapplikationen. Användarna behöver inte leta efter dokument bland e-post och anslagstavlor</string>
+    <string name="info5">All data är skyddat på våra servrar med enastående kapacitet och prestanda. Vi fokuserar på säkerhet och en hållbar framtid.</string>
+    <string name="info6">Som användare har ni kontaktuppgifter till samtliga dvs. med ett enkelt knapptryck kan ni skicka ett meddelande till varandra via vår inbyggda chatt.</string>
+    <string name="info7">Som användare och föräldrar får ni bilder direkt i mobilapplikationen. Dessutom sparas dem i ert egna arkiv.</string>
+    <string name="info8">Det är viktigt att veta om informationen kommit fram till era användare. Som administratör får ni återkoppling på vilka som läst meddelande eller få återkoppling på vilka som kommer att delta på ett event.</string>
+    <string name="info9">Missa aldrig något möte. Med vår kalender får du notis innan varje event.</string>
+    <string name="info10">En användare ska aldrig behöva leta efter information. Informationen ska komma till användarna.</string>
+    <string name="info11">Integritet är viktig. Alla information är skyddad så att bara du kan se information som är avsedd för dig. Vi lämnar inte ut information om våra användare.</string>
+    <string name="info12">Är ni en fotbollsförening? Nu har ni alla tabeller och resultat från Svenskfotboll.se direkt i mobilapplikationen.</string>
+    <string name="skip"><u>Hoppa över</u></string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+
+    <string name="start">start</string>
+    <string name="next">next</string>
+    <string name="norecord_text_group">Finns inga grupper ännu</string>
+    <string name="norecord_text_comment">Inga kommentarer ännu. Bli den första att kommentera</string>
+    <string name="info">Användarvillkor</string>
+    <string name="info_"><u>Allmänna Villkor</u></string>
+    <string name="info_details"><u> Hem</u></string>
+    <string name="text_email">E-post eller telefonnummer</string>
+    <string name="logo">LUSGO</string>
+    <string name="internet">Kontrollera din internetanslutning</string>
+    <string name="contactinfo">Do you want your own app for school? Do not hesitate to contact us.
+
+    <string name="permission_title_rationale">Permission needed</string>
+  <string name="label_cancel">Cancel</string>
+    <string name="label_ok">OK</string>
+<br>info@lusgo.com</br></string>
+    <string name="ef_selected">%d Vald</string>
+    <string name="ef_selected_with_limit">%1$d/%2$d Vald</string>
+    <string name="ef_msg_limit_images">Max 10 bilder är tillåtet</string>
+
+
+    <string name="abouttxt">Welcome to Lusgo is a communication tool for schools, preschools, associations and companies.</string>
+    <string name="registerschool"> Registrera er verksamhet</string>
+    <string name="permission_read_storage_rationale">Storage read permission is needed to pick files.</string>
+    <string name="label_select_picture">Select Picture</string>
+    <string name="format_max_cropped_image_size">Max cropped image size cannot be less then %d</string>
+
+    <string name="registeruser">  Registrera användare</string>
+    <string name="text_pass">Lösenord</string>
+    <string name="login"> Logga In</string>
+    <string name="like">  Tycka om</string>
+    <string name="comment"> Kommentar</string>
+    <string name="registr"> Registrera dig</string>
+    <string name="chat">chat</string>
+    <string name="forgot">Glömt Lösenord?</string>
+    <string name="forgot_string">Glömt Lösenord</string>
+    <string name="changepassword">Ändra lösenord</string>
+    <string name="resetpassword">Updatera lösenord</string>
+
+    <string name="rg_txt">Här kan du registrera dig. Det går inte att registrera sig utan att välja verksamhet. Sök efter verksamheten med namn eller ID-nummer i fältet nedan. Bekräfta din e-post efter registreringen. Därefter invänta att administratören ska godkänna dig.</string>
+
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="ad_unit_id">ca-app-pub-3940256099942544/8135179316</string>
+
+    <string name="no_data_found">Ingen information hittad</string>
+    <string name="url_not_found">URL hittades inte</string>
+    <string name="failed_to_connect">Det gick inte att ansluta</string>
+    <string name="data_on_server_not_found">Data på servern hittades inte</string>
+    <string name="data_conversion_error">Fel för datakonvertering</string>
+    <string name="crop">Crop</string>
+
+    <string name="dialog_permission_title">Bevilja behörigheter</string>
+
+    <string name="dialog_permission_message">Den här appen behöver tillåtelse för att använda den här funktionen. Du kan bevilja dem i appinställningar.</string>
+    <string name="go_to_settings">GÅ TILL INSTÄLLNINGAR</string>
+    <string name="lbl_set_profile_photo">Ställ in bild</string>
+    <string name="lbl_take_camera_picture">Ta en bild</string>
+    <string name="lbl_choose_from_gallery">Välj från galleriet</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="text_rolchange">Vill du ge denna person samma behörighet som dig själv? Välj Team som denna person ska administrera</string>
+    <string name="l_nk">Länk</string>
+    <string name="you_agree_to_privacy_policy">Genom att registrera dig godkänner du våra användarvillkor och vår datapolicy</string>
+    <string name="l_nk_namn">Länk namn</string>
+    <string name="lnk">Länk</string>
+    <string name="kontakt">Kontakt</string>
+    <string name="dokument">Dokument</string>
+    <string name="ta_bort_den_h_r_aviseringen_aviseringen">Ta bort den här aviseringen aviseringen</string>
+    <string name="anm_rkningar">Anmärkningar</string>
+    <string name="skriv_kommentar_tillbaka_till_rapport_ren">Skriv kommentar tillbaka till rapportören</string>
+    <string name="det_finns_ingen_data">Det finns ingen data</string>
+    <string name="det_finns_inga_dokument">Det finns inga dokument</string>
+    <string name="s_k_anv_ndare">Sök användare</string>
+    <string name="msg_text">Användare kan inte svara på detta meddelande. De kan bara markera att de läst meddelandet.</string>
+    <string name="event_text">Om event ska skickas till några enskilda användare som inte tillhör någon specifik grupp.</string>
+    <string name="message_text">Om meddelandet ska skickas till några enskilda användare som inte tillhör någon specifik grupp eller team.</string>
+    <string name="msg_createnews">Det går även att klistra in en Youtube länk här.</string>
+    <string name="user_text">Telangana Finance Minister, T Harish Rao stated that contracting agencies must take responsibility for repairing damaged pump houses of the Kaleshwaram Lift Irrigation Scheme (KLIS) and stated that the state government would not spend any money on it. Harish Rao said that the Kaleshwaram pump houses are submerged due to natural disasters, and not because of human negligence.</string>
+
+    <!--    <string name="ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
+</resources>

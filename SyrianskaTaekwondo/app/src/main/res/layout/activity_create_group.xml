@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ToolbarTheme">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:src="@drawable/logo_app"
+                android:text=" Skapa grupp"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/camera">
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width ="0dip"
+            android:layout_height ="wrap_content"
+            android:layout_weight ="1"
+            android:id="@+id/group_text"
+            android:inputType="textMultiLine"
+            android:gravity="bottom"
+            android:maxHeight="150dp"
+            android:maxLength="40"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:hint=" Ange gruppnamn"
+            android:imeOptions="actionSend"/>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="start|center"
+            android:hint="Ange gruppnamn"
+            android:padding="10dp"
+            android:textSize="@dimen/text_size_12sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="gone">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/check"
+
+            android:tint="@color/white"
+            app:backgroundTint="@color/green"
+            android:layout_marginEnd="20dp" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/size_participate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="start|center"
+            android:layout_marginStart="10dp"
+            android:hint="Deltagare: 4"
+            android:textColor="@color/black"
+            android:textStyle="bold">
+
+        </androidx.appcompat.widget.AppCompatTextView>
+
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       />
+
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:background="@color/gray" />-->
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_parent"
+    android:layout_width="75dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <agency.tango.android.avatarview.views.AvatarView
+        android:id="@+id/iv_profile"
+        android:layout_width="51dp"
+        android:layout_height="52dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/user_txt" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_selected"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-16dp"
+        android:layout_toEndOf="@+id/iv_profile"
+        android:visibility="visible"
+        app:srcCompat="@drawable/item_white_uncheck"
+        tools:ignore="VectorDrawableCompat" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center_horizontal"
+        android:textSize="12sp"
+        android:maxLines="2"
+        android:minLines="2"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

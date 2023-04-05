@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+   >
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:theme="@style/ToolbarTheme"
+                android:background="@color/white"
+                ripple:contentInsetStart="0dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginEnd="60dp"
+                    android:text="Redigera sponsor"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_20sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    >
+
+                </androidx.appcompat.widget.AppCompatTextView>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_sponser"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="5dp"
+
+                android:layout_gravity="center"
+                android:src="@drawable/adidas" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="230dp"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="bottom"
+                android:gravity="right">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/edit_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/camera" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editLayout"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="10dp"
+            android:background="@drawable/edittext"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <!---->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width ="0dip"
+                android:layout_height ="wrap_content"
+                android:layout_weight ="1"
+                android:id="@+id/title"
+                android:inputType="textMultiLine"
+                android:background="@null"
+                android:gravity="bottom"
+                android:maxHeight="150dp"
+                android:textColor="@android:color/black"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:text=" Adidas"
+                android:imeOptions="actionSend"/>
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/img_title"
+                android:paddingRight="10dp"
+
+                android:background="@drawable/ic_edit"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="10dp"
+            android:background="@drawable/edittext"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+            <!---->
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width ="0dip"
+                android:layout_height ="wrap_content"
+                android:layout_weight ="1"
+                android:id="@+id/link"
+                android:inputType="textMultiLine"
+                android:background="@null"
+                android:gravity="bottom"
+                android:maxHeight="150dp"
+                android:textColor="@android:color/black"
+
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:text=" www.adidas.com"
+                android:imeOptions="actionSend"/>
+            <androidx.appcompat.widget.AppCompatImageView
+
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/img_link"
+                android:paddingRight="10dp"
+
+                android:background="@drawable/ic_edit"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+
+        <!--    <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="start"
+                    android:drawableStart="@drawable/login"
+                    android:text=" Adidas"
+                    android:textColor="@android:color/black"
+                    android:textStyle="normal" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_edit" />
+            </FrameLayout>-->
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:background="@drawable/create_button"
+                android:text="Redigera sponsor"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

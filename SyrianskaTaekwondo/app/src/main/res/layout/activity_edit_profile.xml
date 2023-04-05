@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activity.ProfileActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:theme="@style/ToolbarTheme"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_menu"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            </androidx.appcompat.widget.AppCompatImageView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="Profil"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_20sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/pp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@color/ef_colorPrimary"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="124dp"
+                    android:gravity="right"
+                    app:layout_constraintLeft_toLeftOf="@+id/pp"
+                    app:layout_constraintTop_toTopOf="@+id/pp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_selected1"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@+id/iv_profile"
+                        android:src="@drawable/camera"
+                        android:visibility="visible"
+                        tools:ignore="VectorDrawableCompat" />
+                </LinearLayout>
+
+                <agency.tango.android.avatarview.views.AvatarView
+                    android:id="@+id/pp_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="144dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_icon"
+                    app:layout_constraintLeft_toLeftOf="@+id/pp"
+                    app:layout_constraintTop_toTopOf="@+id/pp" />
+
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="144dp"
+                    android:gravity="right"
+                    app:layout_constraintLeft_toLeftOf="@+id/pp"
+                    app:layout_constraintTop_toTopOf="@+id/pp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_selected"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="bottom"
+                        android:layout_toEndOf="@+id/iv_profile"
+                        android:src="@drawable/camera"
+                        android:visibility="visible"
+                        tools:ignore="VectorDrawableCompat" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/sampleImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ph"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/pp_img">
+
+                <LinearLayout
+                    android:id="@+id/ll_nm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="2"
+                        android:gravity="start"
+                        android:text="Namn"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:maxLength="25"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="normal"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="2"
+                        android:gravity="start"
+                        android:text="Användarnamn"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txt_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:gravity="start"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="normal"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_role"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_nm">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="2"
+                        android:gravity="start"
+                        android:text="Roll"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txt_role"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:gravity="start"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="normal"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_role">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_weight="2"
+                        android:gravity="start"
+
+
+                        android:text="E-post"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/txt_eml"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="30dp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtEmailVerifiera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_18sp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_marginEnd="35dp"
+                            android:layout_gravity="end"
+                            android:textColor="@color/blue"
+                            android:text="Verifiera"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/email_verify"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="30dp"
+                            android:gravity="end"
+                            android:src="@drawable/invarifed"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_email">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_weight="2"
+                        android:gravity="start"
+                        android:text="Telefonnummer"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/txt_tel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginEnd="30dp"
+                            android:gravity="start"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtVerifiera"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dimen_18sp"
+                            android:textStyle="bold"
+                            android:visibility="gone"
+                            android:background="?attr/selectableItemBackground"
+                            android:layout_marginEnd="35dp"
+                            android:layout_gravity="end"
+                            android:textColor="@color/blue"
+                            android:text="Verifiera"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/mobile_verify"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="30dp"
+                            android:gravity="end"
+                            android:src="@drawable/varifed"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btn_changepass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    app:layout_constraintTop_toBottomOf="@+id/ll_email">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_change"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/outline_button"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Ändra lösenord"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="normal"
+                        android:visibility="visible"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="25dp"
+                        android:visibility="gone"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_button_red"
+                        android:gravity="center"
+                        android:orientation="vertical"
+
+                        >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_delete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginEnd="25dp"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="Radera konto"
+                            android:textColor="@color/material_red"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:textStyle="normal"
+                            android:visibility="visible"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_privacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_email">
+
+                    <CheckBox
+                        android:id="@+id/isprivacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:gravity="start|center_vertical"
+                        android:text="@string/you_agree_to_privacy_policy"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="55dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/link"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="start|center_vertical"
+                            android:text="@string/info"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="start|center_vertical"
+                            android:text="  &amp;  "
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/datapolicy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="30dp"
+                            android:gravity="end|center_vertical"
+                            android:text="Datapolicy"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/ff_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/form_padding_space"
+                android:layout_marginLeft="@dimen/form_padding_space"
+                android:layout_marginTop="@dimen/form_padding_space50"
+                android:layout_marginEnd="@dimen/form_padding_space"
+                android:layout_marginRight="@dimen/form_padding_space"
+                android:background="@color/bluedark"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/ll_ph"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="@string/changepassword"
+                    android:textColor="@android:color/white"
+
+                    android:textSize="@dimen/text_size_20sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="end|bottom"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintLeft_toRightOf="@+id/pp_img"
+                tools:ignore="MissingConstraints">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/pencil2"
+
+                    app:layout_constraintLeft_toRightOf="@id/pp_img"
+                    app:layout_constraintTop_toTopOf="@+id/pp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:tag="cards main container">
+
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_events"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/calandar_event"
+        android:elevation="50dp"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardUseCompatPadding="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/viewline_curve"
+                android:padding="5dp" />
+
+            <LinearLayout
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/calandar_event"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1.5"
+                        android:padding="10dp"
+                        android:text="12-12-2019"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16sp"
+
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/loc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp"
+
+                            android:textStyle="bold"
+                            tools:ignore="NestedWeights" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/end_event"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/material_red"
+                            android:textSize="@dimen/text_size_16sp"
+
+                            android:textStyle="bold"
+                            tools:ignore="NestedWeights" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Sweta Gupta"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img1"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/arrow" />
+
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/team_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="fggfdg"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/sttime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:textSize="16sp"
+
+                        android:textColor="@color/black" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:src="@drawable/delete"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:text="Noida"
+                        android:textSize="16sp"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/ok"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="start"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outline_button"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Ja"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/dimen_2dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outline_button"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Nej"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/maybe_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/dimen_2dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outline_button"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+
+                        android:paddingRight="10dp"
+                        android:text="Kanske"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_public"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/join"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outline_button"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Få en påminnelse"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/coach_admin_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/outline_button"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_attend"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".75"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginBottom="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Närvarar"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                        <FrameLayout
+                            android:id="@+id/ff_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:paddingStart="10dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+
+                                android:src="@drawable/like_attend" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/attend"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginBottom="10dp"
+
+                                android:paddingLeft="20dp"
+                                android:paddingRight="10dp"
+                                android:text="1"
+                                android:textColor="@color/black" />
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_notans"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Ej svarat"
+
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/not_answer" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/not_ans"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:text="1"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_notattend"
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center_horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Närvarar inte"
+                            android:textColor="@color/black"
+
+                            android:textSize="12sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/dislike" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/not_attend"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:text="1"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_maybe"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".75"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="end"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+
+                            android:text="Kanske"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:gravity="end">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/question" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/maybe"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginStart="2dp"
+                                android:layout_marginBottom="2dp"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

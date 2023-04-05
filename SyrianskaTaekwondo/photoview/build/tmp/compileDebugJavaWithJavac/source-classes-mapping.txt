@@ -1,0 +1,36 @@
+com/misha/photoview/BuildConfig.java
+ com.misha.photoview.BuildConfig
+com/misha/photoview/OnOutsidePhotoTapListener.java
+ com.misha.photoview.OnOutsidePhotoTapListener
+com/misha/photoview/Util.java
+ com.misha.photoview.Util
+ com.misha.photoview.Util$1
+com/misha/photoview/Compat.java
+ com.misha.photoview.Compat
+com/misha/photoview/OnViewDragListener.java
+ com.misha.photoview.OnViewDragListener
+com/misha/photoview/PhotoView.java
+ com.misha.photoview.PhotoView
+com/misha/photoview/OnGestureListener.java
+ com.misha.photoview.OnGestureListener
+com/misha/photoview/OnScaleChangedListener.java
+ com.misha.photoview.OnScaleChangedListener
+com/misha/photoview/PhotoViewAttacher.java
+ com.misha.photoview.PhotoViewAttacher
+ com.misha.photoview.PhotoViewAttacher$1
+ com.misha.photoview.PhotoViewAttacher$2
+ com.misha.photoview.PhotoViewAttacher$3
+ com.misha.photoview.PhotoViewAttacher$4
+ com.misha.photoview.PhotoViewAttacher$AnimatedZoomRunnable
+ com.misha.photoview.PhotoViewAttacher$FlingRunnable
+com/misha/photoview/OnSingleFlingListener.java
+ com.misha.photoview.OnSingleFlingListener
+com/misha/photoview/OnViewTapListener.java
+ com.misha.photoview.OnViewTapListener
+com/misha/photoview/OnMatrixChangedListener.java
+ com.misha.photoview.OnMatrixChangedListener
+com/misha/photoview/CustomGestureDetector.java
+ com.misha.photoview.CustomGestureDetector
+ com.misha.photoview.CustomGestureDetector$1
+com/misha/photoview/OnPhotoTapListener.java
+ com.misha.photoview.OnPhotoTapListener

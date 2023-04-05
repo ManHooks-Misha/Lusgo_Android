@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.CreateEvent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:theme="@style/ToolbarTheme"
+                android:background="@color/white"
+                ripple:contentInsetStart="0dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Nytt event"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_20sp"
+                    android:textStyle="bold"
+                    android:visibility="visible">
+
+                </androidx.appcompat.widget.AppCompatTextView>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/form_padding_space15"
+                android:layout_marginLeft="@dimen/form_padding_space15"
+                android:layout_marginTop="@dimen/form_padding_space15"
+                android:layout_marginEnd="@dimen/form_padding_space15"
+                android:layout_marginRight="@dimen/form_padding_space15"
+                android:background="@drawable/edittext"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/title"
+                    android:visibility="visible" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/edit_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:gravity="start|center_vertical"
+
+                    android:hint="  Event namn"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/dgray" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center|center_vertical"
+                android:text="ELLER"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/dgray"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/other_event"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/form_padding_space15"
+                android:layout_marginLeft="@dimen/form_padding_space15"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/form_padding_space15"
+                android:background="@drawable/edittext"
+                android:gravity="start|center_vertical"
+                android:hint="  Titel"
+                android:inputType="textVisiblePassword"
+                android:maxLength="40"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/dgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="29dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/calender_event" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/startdate"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center|center_vertical"
+                    android:hint="  7 Jan 2020"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/dgray"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/startTime"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+
+                    android:hint="10:58 "
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/dgray"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+
+                    android:hint="-"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/dgray"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/endTime"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+
+                    android:hint="12:00"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/dgray"
+                    android:textSize="15sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/enddate"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:hint="18 Jan, 2020"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/dgray"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/form_padding_space15"
+                android:layout_marginLeft="@dimen/form_padding_space15"
+                android:layout_marginEnd="@dimen/form_padding_space15"
+                android:layout_marginRight="@dimen/form_padding_space15"
+                android:visibility="gone"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/location" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+
+                    android:gravity="start|center_vertical"
+                    android:hint="  gäst"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/dgray" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/editLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/edittext"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/location" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/location"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="bottom"
+                    android:hint=" Plats"
+                    android:imeOptions="actionSend"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxHeight="150dp"
+                    android:maxLength="50"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/edittext"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/descraption" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/desc_event"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="bottom"
+                    android:hint=" Beskrivning"
+                    android:imeOptions="actionSend"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxHeight="150dp"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext"
+                android:visibility="gone"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/search"
+                android:gravity="center_vertical"
+                android:hint=" Skickas till"
+                android:padding="10dp"
+                android:layout_weight="0.7"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:defaultQueryHint="Skriv namn"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="Skriv namn"
+                app:searchHintIcon="@drawable/search"
+                app:searchIcon="@drawable/search" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/infoCreateEventIMG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:tint="#7E7C7C"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_info"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_teams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/teams"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:text="Teams"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight=".28"
+                    android:background="@drawable/edittext"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/team"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:spinnerMode="dropdown" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/down_arrow" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/gray" />
+
+            <!--  <LinearLayout
+                  android:id="@+id/ll_coach"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:orientation="vertical"
+
+                  android:visibility="visible">
+
+                  <androidx.appcompat.widget.AppCompatTextView
+                      android:id="@+id/coach"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginStart="12dp"
+                      android:layout_marginEnd="10dp"
+                      android:background="@drawable/outline_button"
+                      android:gravity="center"
+
+                      android:padding="8dp"
+                      android:text="Tränare"
+                      android:textColor="@android:color/black"
+                      android:textSize="15sp"
+                      android:textStyle="bold" />
+
+              </LinearLayout>-->
+
+            <FrameLayout
+                android:id="@+id/ll_group_g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/outline_button">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/group_plus"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ui"
+                    android:tint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/group_minus"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/mi"
+                    android:tint="@color/white"
+                    android:visibility="gone" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:text="Grupper"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/select_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@null"
+                    android:gravity="start|center_vertical"
+                    android:text="Välj alla"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:padding="2dp"
+                    android:text="Grupp namn"
+
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/group_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/v_id"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/ll_coach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/outline_button">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/g_plus"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/ui"
+
+                    android:tint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/g_minus"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/mi"
+
+                    android:tint="@color/white"
+                    android:visibility="gone" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/users"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:text="Teamleader"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/selectAllUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@null"
+                    android:gravity="start|center_vertical"
+                    android:text="Välj alla"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:text="Användare"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/user_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/fans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@null"
+                android:gravity="start|center_vertical"
+                android:text="Inlägg skickas även till oregistrerade användare"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/create_event"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/form_padding_space"
+                android:layout_marginLeft="@dimen/form_padding_space"
+                android:layout_marginTop="@dimen/form_padding_space35"
+                android:layout_marginEnd="@dimen/form_padding_space"
+                android:layout_marginRight="@dimen/form_padding_space"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/create_button"
+                android:visibility="gone"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/create"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:text="Skapa"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

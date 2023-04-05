@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lighter_gray"
+    android:orientation="vertical"
+    tools:context=".Add_newLink">
+
+    <!--  <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="10dp"
+          android:elevation="10dp"
+          app:cardBackgroundColor="@color/white"
+          app:cardCornerRadius="10dp">-->
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar xmlns:ripple="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:theme="@style/ToolbarTheme"
+                android:background="@color/white"
+                ripple:contentInsetStart="0dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="@string/kontakt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_20sp"
+                    android:textStyle="bold"
+                    android:visibility="visible">
+
+                </androidx.appcompat.widget.AppCompatTextView>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edittext"
+                android:hint="Namn"
+                android:inputType="text|textVisiblePassword"
+                android:maxLength="25"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edittext"
+                android:hint="Beskrivning"
+                android:inputType="text"
+                android:maxLength="25"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edittext"
+                android:hint="Telefonnummer"
+                android:inputType="number"
+
+                android:maxLength="10"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/edittext"
+                android:hint="E-post"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/save_link"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="@dimen/dimen_14sp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/create_button"
+                            android:gravity="center"
+                            android:text="Lägg till kontakt"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />-->
+        </LinearLayout>
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_gravity="center_horizontal"
+
+    android:layout_height="wrap_content">
+        <agency.tango.android.avatarview.views.AvatarView
+            android:id="@+id/pp_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/user_profile"
+            app:layout_constraintLeft_toLeftOf="@+id/pp"
+            app:layout_constraintTop_toTopOf="@+id/pp" />
+        <agency.tango.android.avatarview.views.AvatarView
+            android:id="@+id/pp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/camera"
+
+            app:layout_constraintLeft_toLeftOf="@+id/pp"
+            app:layout_constraintTop_toTopOf="@+id/pp" />
+</FrameLayout>
+    </FrameLayout>
+
+    <!--    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/save_link"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="@dimen/dimen_14sp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/create_button"
+            android:gravity="center"
+            android:text="Lägg till länk"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />-->
+</LinearLayout>

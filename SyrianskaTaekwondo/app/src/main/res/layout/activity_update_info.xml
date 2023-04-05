@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Update_info">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ToolbarTheme">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logo_app"
+                android:text="Uppdatera Info"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </androidx.appcompat.widget.Toolbar>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@color/bluedark"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="INFO"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="@color/gray" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/link"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:padding="10dp"
+            android:text="Länkar"
+
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="@color/gray" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/document"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:padding="10dp"
+            android:text="Dokument"
+
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="@color/gray" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Kontakt"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_contact1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text="Håll intryckt för att ändra ordningen"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/add_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="Lägg till"
+                    android:textColor="@color/bluedark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.app.SyrianskaTaekwondo.hejtelge.grid.DynamicGridView
+                android:id="@+id/ll_contact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="1"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_info"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext"
+                android:gravity="start"
+                android:hint="  Ange Info"
+                android:padding="15dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_link1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text="Håll intryckt för att ändra ordningen"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/add_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="Lägg till"
+                    android:textColor="@color/bluedark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.app.SyrianskaTaekwondo.hejtelge.grid.DynamicGridView
+                android:id="@+id/ll_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:numColumns="1"
+                android:orientation="vertical" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_document"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:text="Håll intryckt för att ändra ordningen"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/document_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="Lägg till"
+                    android:textColor="@color/bluedark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.app.SyrianskaTaekwondo.hejtelge.grid.DynamicGridView
+                android:id="@+id/file_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:numColumns="1"
+                android:orientation="vertical" />
+
+            <!-- <androidx.recyclerview.widget.RecyclerView
+                 android:id="@+id/file_list"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                 app:layout_constraintBottom_toBottomOf="parent" />
+-->
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--    </ScrollView>-->
+
+    <!--<com.google.android.material.tabs.TabLayout
+            android:id="@+id/result_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/bluedark"
+            android:background="@drawable/new_back"
+            app:tabIndicatorColor="@color/bluedark"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+           />-->
+</LinearLayout>

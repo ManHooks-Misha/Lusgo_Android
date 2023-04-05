@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/offwhite"
+        android:orientation="vertical"
+        android:tag="cards main container">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/ToolbarTheme"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/back"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end|top"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:padding="5dp"
+                                android:src="@drawable/arrow_back"
+                                android:visibility="visible"
+                                app:tint="@color/black"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="sans-serif"
+                                android:maxLength="40"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_20sp"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/delete"
+                                android:layout_width="25dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/bin"
+                                android:visibility="visible" />
+
+
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/calling"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="start"
+                            android:text="KALLELSE"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp"
+                    android:visibility="visible"
+                    card_view:cardBackgroundColor="@color/white"
+                    card_view:cardCornerRadius="10dp"
+                    card_view:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/ll_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Kommer du att närvara?"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal">
+
+
+                            <RelativeLayout
+                                android:id="@+id/rl_cancel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_margin="2dp"
+                                android:layout_marginStart="6dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/greyback">
+
+                                <ImageView
+                                    android:id="@+id/test_button_image1"
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginStart="30dp"
+                                    android:src="@drawable/cross"
+                                    app:tint="@color/material_red" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/cancel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_alignTop="@+id/test_button_image1"
+                                    android:layout_marginStart="6dp"
+                                    android:layout_marginEnd="40dp"
+                                    android:layout_toRightOf="@+id/test_button_image1"
+                                    android:gravity="center"
+                                    android:text="Kommer ej"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_ok"
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_margin="2dp"
+                                android:layout_marginEnd="6dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/greyback">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/test_button_image"
+                                    android:layout_width="10dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginStart="30dp"
+                                    android:src="@drawable/check"
+                                    app:tint="@color/green" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/ok"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_alignTop="@+id/test_button_image"
+                                    android:layout_marginEnd="40dp"
+                                    android:layout_toRightOf="@+id/test_button_image"
+                                    android:gravity="center"
+                                    android:text="Kommer"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/maybe_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/outline_button"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+
+                            android:text="Kanske"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:orientation="horizontal">
+
+                                <agency.tango.android.avatarview.views.AvatarView
+                                    android:id="@+id/userProfile"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="start"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/user_profile" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtCreatedBy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center_vertical"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size_16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/lighter_gray" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Datum"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_size_16sp"
+                                android:textStyle="normal" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp"
+                                android:textStyle="normal" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/lighter_gray" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:gravity="start"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/sttime"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size_16sp"
+
+                                    android:textStyle="bold"
+                                    tools:ignore="NestedWeights" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/end_event"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:textColor="@color/material_red"
+                                    android:textSize="@dimen/text_size_16sp"
+                                    android:textStyle="bold"
+
+                                    android:visibility="gone"
+                                    tools:ignore="NestedWeights" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:visibility="gone" />
+
+
+                        <LinearLayout
+                            android:id="@+id/llloc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Plats"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/loc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/lighter_gray" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_evnts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp">
+
+                        <LinearLayout
+                            android:id="@+id/lldesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_weight="1"
+                                android:text="Beskrivning"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/text_size_16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start|center_vertical"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16sp"
+                                android:textStyle="normal" />
+
+                            <!--
+                                                            <View
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="1dp"
+                                                                android:background="@color/lighter_gray" />
+                            -->
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/ll_public"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/join"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/outline_button"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Få en påminnelse"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/admin_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="6dp"
+                    android:elevation="10dp"
+
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:id="@+id/coach_admin_block"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:padding="20dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/ll_attend"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:id="@+id/ff_login"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+
+                                >
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/right" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/attend"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="0"
+                                    android:textColor="@color/green"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_notans"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center_horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="Ej svarat"
+
+                                android:textColor="@color/black"
+                                android:textSize="12sp" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginBottom="4dp"
+
+                                    android:src="@drawable/not_answer" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/not_ans"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="2dp"
+                                    android:layout_marginBottom="2dp"
+                                    android:text="0"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_notattend"
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+
+                                    android:src="@drawable/remove" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/not_attend"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="0"
+                                    android:textColor="@color/material_red"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_maybe"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+
+                                    android:src="@drawable/maybeicon" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/maybe"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:layout_marginStart="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="0"
+                                    android:textColor="@color/yellow"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/attending_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Kommer"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progress_dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|center_horizontal"
+                    android:elevation="40dp"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

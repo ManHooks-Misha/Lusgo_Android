@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/dialog_back"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/anm_rkningar"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:textSize="@dimen/dimen_16dp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/message_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_action"
+        android:gravity="start"
+        android:hint="@string/skriv_kommentar_tillbaka_till_rapport_ren"
+        android:imeOptions="actionSend"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="textMultiLine|textCapSentences"
+
+        android:maxHeight="150dp"
+        android:overScrollMode="always"
+        android:padding="10dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:id="@+id/ll_action"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttoncancel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/outline_button"
+            android:gravity="center"
+            android:text="Avbryt"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonOk"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/outline_button"
+            android:gravity="center"
+            android:text="OK"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</LinearLayout>

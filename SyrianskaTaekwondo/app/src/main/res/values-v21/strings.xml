@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="l_nk_namn">Länk namn</string>
+    <string name="lnk">Länk</string>
+    <string name="kontakt">Kontakt</string>
+    <string name="dokument">Dokument</string>
+    <string name="ta_bort_den_h_r_aviseringen_aviseringen">Ta bort den här aviseringen aviseringen</string>
+    <string name="s_k_anv_ndare">Sök användare</string>
+</resources>

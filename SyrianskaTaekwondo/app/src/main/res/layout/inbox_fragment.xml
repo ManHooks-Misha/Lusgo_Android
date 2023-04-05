@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/scrollView"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_add"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/ff_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/news_g"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/secondary_btn"
+                    android:gravity="center"
+                    android:text="Skriv ett inlägg"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="1dp"
+
+                android:layout_height="50dp"
+                android:background="@color/gray" />
+
+            <FrameLayout
+                android:id="@+id/ff_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/event_g"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/event"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/secondary_btn"
+                    android:gravity="center"
+                    android:text="Skapa event"
+
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="1dp"
+
+                android:layout_height="50dp"
+                android:background="@color/gray" />
+
+            <FrameLayout
+                android:id="@+id/ff_inbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/inbox"
+
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/inbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/secondary_btn"
+
+                    android:gravity="center"
+                    android:text="Skriv meddelande"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <com.mipl.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            app:sliderAnimationDuration="600"
+
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderCircularHandlerEnabled="true"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="5dp"
+            app:sliderIndicatorRadius="0dp"
+            app:sliderIndicatorSelectedColor="@color/colorAccent"
+            app:sliderIndicatorUnselectedColor="@color/colorPrimary"
+            app:sliderScrollTimeInSec="5"
+            app:sliderStartAutoCycle="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <!--<
+            android:id="@+id/result_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            app:tabIndicatorColor="@color/bluedark"
+            app:tabMode="fixed"
+            app:tabPaddingBottom="0dp"
+            app:tabPaddingEnd="2dp"
+            app:tabPaddingStart="2dp"
+            app:tabPaddingTop="0dp"
+            app:tabSelectedTextColor="@color/bluedark"
+            app:tabTextColor="@color/black" />-->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/result_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/new_back"
+            app:tabIndicatorColor="@color/bluedark"
+            app:tabIndicatorHeight="2dp"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp"
+            app:tabSelectedTextColor="@color/bluedark"
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
+            app:tabTextColor="@color/black">
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <com.app.SyrianskaTaekwondo.hejtelge.views.CustomRecycler
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <!-- <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/inboxlist"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+
+             android:visibility="gone"
+             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+ -->
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

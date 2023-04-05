@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ProgressBar
+        android:id="@+id/pp_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inboxlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:visibility="visible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:textSize="@dimen/dimen_16dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Det finns inget att visa"
+        android:visibility="gone" />
+</LinearLayout>

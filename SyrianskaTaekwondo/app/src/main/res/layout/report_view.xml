@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:padding="15dp"
+        android:text="Rapportera kommentar"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+
+        android:textSize="@dimen/text_size_20sp" />
+    <RadioGroup
+        android:id="@+id/reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rd_1"
+            android:layout_width="wrap_content"
+            android:buttonTint="@color/bluedark"
+            android:layout_height="wrap_content"
+            android:text="Innehåll av sexuell karaktär" />
+
+        <RadioButton
+            android:id="@+id/rd_2"
+            android:buttonTint="@color/bluedark"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Våldsamt eller frånstötande innehåll" />
+
+        <RadioButton
+            android:id="@+id/rd_3"
+            android:buttonTint="@color/bluedark"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hatiskt eller kränkande innehåll" />
+
+        <RadioButton
+            android:id="@+id/rd_4"
+            android:buttonTint="@color/bluedark"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skadligt eller farligt beteende" />
+
+        <RadioButton
+            android:id="@+id/rd_5"
+            android:buttonTint="@color/bluedark"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spam eller vilseledande innehåll" />
+
+
+    </RadioGroup>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/grey"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttoncancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginEnd="30dp"
+            android:text="Avbryt"
+            android:textColor="@color/bluedark" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/buttonOk"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:text="Rapportera"
+            android:textColor="@color/bluedark" />
+
+    </LinearLayout>
+</LinearLayout>

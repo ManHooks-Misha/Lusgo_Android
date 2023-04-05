@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/offwhite"
+
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.app.SyrianskaTaekwondo.hejtelge.CollapsibleCalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:ccv_allowStateChange="true"
+            app:ccv_arrowColor="#000000"
+            app:ccv_dayTextColor="#000000"
+            app:ccv_eventIndicatorColor="#0c449b"
+            app:ccv_headerTextColor="#000000"
+            app:ccv_selectedDayBackgroundColor="#0c449b"
+            app:ccv_state="month"
+            app:ccv_weekDayTextColor="#000000" />
+
+        <LinearLayout
+            android:id="@+id/ll_add1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:scrollbars="none"
+            android:background="@color/offwhite"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/calendar_event_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

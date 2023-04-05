@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".activity.ImageShowDetails">
+
+    <com.mipl.autoimageslider.SliderView
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:sliderAnimationDuration="600"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="false"
+        app:sliderCircularHandlerEnabled="false"
+        app:sliderIndicatorAnimationDuration="0"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="5dp"
+        app:sliderIndicatorRadius="0dp"
+        app:sliderIndicatorSelectedColor="@color/colorAccent"
+        app:sliderIndicatorUnselectedColor="@color/colorPrimary"
+        app:sliderScrollTimeInSec="5"
+        app:sliderStartAutoCycle="false" />
+</androidx.constraintlayout.widget.ConstraintLayout>

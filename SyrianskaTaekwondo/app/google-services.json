@@ -1,0 +1,255 @@
+{
+  "project_info": {
+    "project_number": "462829279903",
+    "firebase_url": "https://hej-telge.firebaseio.com",
+    "project_id": "hej-telge",
+    "storage_bucket": "hej-telge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462829279903:android:265f60fb370028e350a0aa",
+        "android_client_info": {
+          "package_name": "com.app.SodertaljeSciencePark.hejtelge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462829279903-acp5rrol3tl0mimrth4uoaer4j1c3dcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-mVv0H0dL3vdyYDEpsH04-G4jrAC0A-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462829279903-acp5rrol3tl0mimrth4uoaer4j1c3dcs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "462829279903-4o43b3jkpv1556d1che5b9mu1j58679d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dev.Lusgo.Lusgo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462829279903:android:a619fa75fb3585f450a0aa",
+        "android_client_info": {
+          "package_name": "com.app.SyrianskaTaekwondo.hejtelge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462829279903-acp5rrol3tl0mimrth4uoaer4j1c3dcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-mVv0H0dL3vdyYDEpsH04-G4jrAC0A-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462829279903-acp5rrol3tl0mimrth4uoaer4j1c3dcs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "462829279903-4o43b3jkpv1556d1che5b9mu1j58679d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dev.Lusgo.Lusgo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462829279903:android:36c671cb25bc376c50a0aa",
+        "android_client_info": {
+          "package_name": "com.app.hejtelge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462829279903-2gru3rhbe3714h5he32tdg4v2de68cb4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.hejtelge",
+            "certificate_hash": "c104681c49c1f929be5913d107116432c977880b"
+          }
+        },
+        {
+          "client_id": "462829279903-69djjkk6ofhhkocr404lpigq961ii4si.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.hejtelge",
+            "certificate_hash": "c6f760ecfa33a840861c6db134a8af13288b8671"
+          }
+        },
+        {
+          "client_id": "462829279903-8dul1tvsm9tkklav5u5julni9olbokpu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.hejtelge",
+            "certificate_hash": "b06751a4b3b8a485867fa02d73a3e4c1c673ccc8"
+          }
+        },
+        {
+          "client_id": "462829279903-acp5rrol3tl0mimrth4uoaer4j1c3dcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-mVv0H0dL3vdyYDEpsH04-G4jrAC0A-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462829279903-acp5rrol3tl0mimrth4uoaer4j1c3dcs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "462829279903-4o43b3jkpv1556d1che5b9mu1j58679d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dev.Lusgo.Lusgo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462829279903:android:dc25404b3274598450a0aa",
+        "android_client_info": {
+          "package_name": "com.app.misha_test.hejtelge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462829279903-e029sk33cqoab4rpie1uar2sn1p4vqq2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.misha_test.hejtelge",
+            "certificate_hash": "c6f760ecfa33a840861c6db134a8af13288b8671"
+          }
+        },
+        {
+          "client_id": "462829279903-remsfck85bod0ppuiceprog3sftv70po.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.misha_test.hejtelge",
+            "certificate_hash": "b06751a4b3b8a485867fa02d73a3e4c1c673ccc8"
+          }
+        },
+        {
+          "client_id": "462829279903-acp5rrol3tl0mimrth4uoaer4j1c3dcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-mVv0H0dL3vdyYDEpsH04-G4jrAC0A-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462829279903-acp5rrol3tl0mimrth4uoaer4j1c3dcs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "462829279903-4o43b3jkpv1556d1che5b9mu1j58679d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dev.Lusgo.Lusgo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462829279903:android:e038c6e4c807064450a0aa",
+        "android_client_info": {
+          "package_name": "com.app.saaf_sverige.hejtelge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462829279903-2h44pj9amg276fp84edtpj9jvcuokjon.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.saaf_sverige.hejtelge",
+            "certificate_hash": "c6f760ecfa33a840861c6db134a8af13288b8671"
+          }
+        },
+        {
+          "client_id": "462829279903-9shru9cp8m82v5srqvs3k3dl4m3umcro.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.saaf_sverige.hejtelge",
+            "certificate_hash": "c104681c49c1f929be5913d107116432c977880b"
+          }
+        },
+        {
+          "client_id": "462829279903-buokmuv6ituv1p2fv4ca1f5sp08qho89.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.saaf_sverige.hejtelge",
+            "certificate_hash": "b06751a4b3b8a485867fa02d73a3e4c1c673ccc8"
+          }
+        },
+        {
+          "client_id": "462829279903-acp5rrol3tl0mimrth4uoaer4j1c3dcs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-mVv0H0dL3vdyYDEpsH04-G4jrAC0A-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462829279903-acp5rrol3tl0mimrth4uoaer4j1c3dcs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "462829279903-4o43b3jkpv1556d1che5b9mu1j58679d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dev.Lusgo.Lusgo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

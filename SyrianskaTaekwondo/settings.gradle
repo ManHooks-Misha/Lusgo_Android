@@ -1,0 +1,10 @@
+include ':photoview'
+include ':dynamicgrid'
+include ':filepicker'
+//include ':wizardroid'
+include ':autoimageslider'
+include ':ucrop'
+include ':multicontactpicker'
+include ':app', ':aspnetsignalr'
+include ':app'
+rootProject.name = "Hej Telge"

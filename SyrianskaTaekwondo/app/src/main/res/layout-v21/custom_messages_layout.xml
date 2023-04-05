@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <agency.tango.android.avatarview.views.AvatarView
+        android:id="@+id/message_profile_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_recieve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bubble_left_tail"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/message_profile_image"
+            android:paddingEnd="10dp"
+            android:text="Sweta Gupta"
+            android:textColor="#515151"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crd_images_recieve"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="2dp"
+                android:padding="5dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/offwhite"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_single_recieve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/single_img_recieve"
+                        android:layout_width="140dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/splash"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_multiple_recieve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/img_rec1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="2dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="centerCrop"
+
+                                    android:src="@drawable/splash" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/img_rec2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="centerCrop"
+
+                                    android:src="@drawable/banner" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/img_rec3"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginEnd="2dp"
+                                    android:layout_weight="1"
+
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/splash" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/img_rec4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="centerCrop"
+
+                                    android:src="@drawable/banner"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/txt_recieve"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/black_tran"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:id="@+id/value_count_recieve"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="20dp"
+                                        android:text="+2"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/dimen_20dp" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/receiver_message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/message_profile_image"
+                android:text="rece"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="end"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/message_profile_image"
+                android:text="2.40 pm"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/message_sender_image_view"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="5dp"/>
+
+
+    <ImageView
+        android:id="@+id/message_receiver_image_view"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bubble"
+            android:layout_weight="1"
+            android:backgroundTint="#def4ff"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crd_images"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="2dp"
+                android:padding="5dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/offwhite"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/single_img"
+                        android:layout_width="140dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/splash"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_multiple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/img1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="2dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="centerCrop"
+
+                                    android:src="@drawable/splash" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/img2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="centerCrop"
+
+                                    android:src="@drawable/banner" />
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/img3"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_marginEnd="2dp"
+                                    android:layout_weight="1"
+
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/splash" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="10dp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/img4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/banner"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="90dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/black_tran"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:id="@+id/value_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="20dp"
+                                        android:text="+2"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/dimen_20dp" />
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sender_messsage_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginEnd="20dp"
+                android:backgroundTint="@color/white"
+                android:text="hii"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sender_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="end"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/message_profile_image"
+                android:text="2.40 pm"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"/>
+
+
+        </LinearLayout>
+
+            <agency.tango.android.avatarview.views.AvatarView
+                android:id="@+id/image_group"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/image"
+                android:visibility="visible" />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.SyrianskaTaekwondo.hejtelge.widget.ElasticDragDismissFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drag_to_close"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical"
+    app:dragDismissDistance="112dp"
+    app:dragDismissEnableBottomDrag="true"
+    app:dragDismissScale="0.35">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:theme="@style/ToolbarTheme"
+        android:visibility="visible">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Visa Bild"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+            <com.app.SyrianskaTaekwondo.hejtelge.HackyViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="720dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_dot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal" />
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cross"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/cross"
+        android:layout_gravity="end"
+        app:tint="@color/white" />
+
+</com.app.SyrianskaTaekwondo.hejtelge.widget.ElasticDragDismissFrameLayout>

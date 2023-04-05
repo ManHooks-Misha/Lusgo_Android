@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:background="@drawable/chat_image_bg"/>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:theme="@style/ToolbarTheme"
+                android:background="@color/white"
+                app:contentInsetStart="0dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/arrow_back"
+                    android:tint="@color/black" />
+
+                <agency.tango.android.avatarview.views.AvatarView
+                    android:id="@+id/pos"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/group_color" />
+
+                <LinearLayout
+                    android:id="@+id/ll_users"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Group Name"
+                        android:textColor="@color/black"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtOnlineOfLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Online"
+                        android:visibility="gone"
+                        android:textSize="14dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/users"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Sweta, Himanshu, nikhlesh, shefali, shubham..."
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="normal"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:src="@drawable/not_found"
+        android:text="Bli den första att skriva något "
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_20sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+    <!--Chatten är stängd -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/commentsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dimen_6dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="@dimen/dimen_6dp"
+            android:layout_marginBottom="70dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:layout_editor_absoluteX="12dp"
+            tools:layout_editor_absoluteY="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/pp_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <io.codetail.widget.RevealFrameLayout
+        android:id="@+id/rr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="50dp">
+
+<!--
+        <ProgressBar
+            android:id="@+id/chat_progressar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical|center_horizontal"/>
+-->
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/reveal_items2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            android:layout_marginBottom="25dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:id="@+id/reveal_items3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@color/offwhite"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+
+                <LinearLayout
+                    android:id="@+id/gallery_img"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/gallery"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Galleri"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/camera_img"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_button"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/photo"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="Kamera"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </io.codetail.widget.RevealFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/off"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen_4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sampleImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/image"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="@dimen/dimen_2dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="35dp"
+                android:background="@android:color/transparent"
+                android:hint="Skicka meddelande"
+                android:padding="@dimen/dimen_6dp"
+                android:textCursorDrawable="@drawable/cursorfile"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/attach"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="end|center"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/attach"
+                android:paddingRight="10dp"
+                android:textSize="14sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sendMessage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="8dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@drawable/button_ripple"
+            android:backgroundTint="@color/bl"
+            app:cardCornerRadius="40dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                app:tint="@color/white"
+                android:padding="3dp"
+                android:layout_marginLeft="2dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:src="@drawable/send"
+                android:tint="@color/bl"
+                app:fabCustomSize="?actionBarSize" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
